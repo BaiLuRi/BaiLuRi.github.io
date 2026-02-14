@@ -93,8 +93,17 @@
     <script>const shuaizhao = document.getElementById("shuaizhao");
         shuaizhao.addEventListener("click", function () {
             alert("我也不知道为什么要放一张和内容完全不相关的照片，反正就是喜欢这张照片了");
-        });</script>
+        }); let iszoomed = false; // 定义一个变量来跟踪图片是否已经放大
+        shuaizhao.addEventListener("click", function () {
+            if (!iszoomed) {
+                shuaizhao.style.transform = "scale(1.5)"; // 放大图片
+                iszoomed = true; // 更新状态为已放大
+            } else {
+                shuaizhao.style.transform = "scale(1)"; // 恢复原始大小
+                iszoomed = false; // 更新状态为未放大
+            }</script>
 
 </body>
+
 
 </html>
