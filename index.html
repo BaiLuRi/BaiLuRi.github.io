@@ -65,6 +65,21 @@
             /* 文字离左边框留出一点距离 */
             /* 其他样式根据需要调整，比如字体大小、颜色等 */
         }
+         button {
+            margin-top: 0.1px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #ea9c0b;
+            border: 5px solid #0804f7;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #9f9077;
+        }
     </style>
 </head>
 
@@ -89,14 +104,20 @@
         <p><b>虽然没有天赋 会比别人艰苦 别羡慕 版图自我建筑 名声遍布 即使会有变数<br>
                 让你感到厌恶 勤练武 颠覆他们瞧你的真面目！！</b></p>
     </div>
+    <button id="dzs" onclick="dianzan()">0</button>
     <div class="nuohou">!!!!!!!!</div>
     <script>const shuaizhao = document.getElementById("shuaizhao");
         shuaizhao.addEventListener("click", function () {
             alert("我也不知道为什么要放一张和内容完全不相关的照片，反正就是喜欢这张照片了");
-        });
+        });function dianzan() {
+            let dianzanshubiaoqian = window.document.getElementById("dzs");
+            let dianzanshu = parseInt(dianzanshubiaoqian.innerText);
+            let xinshuzhi = dianzanshu + 1;
+            dianzanshubiaoqian.innerText = xinshuzhi
         
     </script>
 
 </body>
 
 </html>
+
